@@ -4,34 +4,128 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Studio V. – Designing Intimacy</title>
+
+  <!-- Font aggiornati -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+
   <style>
     body {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      background-color: #FDFCF9;
+      color: #1A1A1A;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
     }
+
+    header {
+      text-align: center;
+      padding: 1.5em;
+      background-color: #F5EBDD;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      margin: 0;
+      color: #1A1A1A;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 1em 0 0;
+      display: flex;
+      justify-content: center;
+      gap: 1.5em;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #7A5C4F;
+      font-weight: 400;
+    }
+
     .hero {
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 80vh;
+      height: 60vh;
       background-color: #F5EBDD;
       text-align: center;
     }
+
     .hero h2 {
       font-size: 3em;
       font-weight: 300;
       color: #7A5C4F;
-    }
-    .logo {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 2.2em;
-      font-weight: 500;
       margin: 0;
-      color: #1A1A1A;
     }
-    .hero img {
-      display: none;
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      padding: 2em;
+    }
+
+    .content {
+      flex: 3;
+      padding-right: 2em;
+    }
+
+    .profile {
+      flex: 1;
+      background-color: #FAF5EF;
+      padding: 1em;
+      border-radius: 10px;
+    }
+
+    h2 {
+      font-weight: 400;
+      margin-top: 2em;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5em;
+      margin-top: 1em;
+    }
+
+    figure {
+      flex: 1 1 calc(33.33% - 1em);
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    figcaption {
+      margin-top: 0.5em;
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    .button.highlight {
+      display: inline-block;
+      background-color: #7A5C4F;
+      color: #fff;
+      padding: 0.7em 1.5em;
+      text-decoration: none;
+      border-radius: 5px;
+      margin: 1.5em 0;
+    }
+
+    footer {
+      background-color: #F5EBDD;
+      text-align: center;
+      padding: 1em;
+      margin-top: 2em;
     }
   </style>
 </head>
@@ -56,41 +150,77 @@
 
   <main class="container">
     <section class="content">
-      <h2 id="home">Benvenuta su Studio V.</h2>
-      <p>Un brand che celebra il corpo femminile con capi essenziali, sofisticati e sostenibili.</p>
+      <h2 id="home">Benvenuta nel mondo di Studio V.</h2>
+      <p>Più che un brand, un gesto di cura: Studio V. veste la pelle femminile con essenzialità, armonia e rispetto.</p>
 
-      <h2 id="brand">Chi siamo</h2>
-      <p>Studio V. nasce da un'intuizione di Veronica De Caro: moda come espressione di intimità, forza ed eleganza quotidiana. Con linee essenziali, tessuti etici e colori caldi, il brand fonde estetica e consapevolezza, ispirandosi alla donna reale. Ogni collezione è un invito ad abitare il proprio corpo con naturalezza.</p>
+      <h2 id="brand">La nostra visione</h2>
+      <p>Fondato da Veronica De Caro, Studio V. nasce dall’idea che la moda possa essere intima, quotidiana e trasformativa. Le sue linee fluide e sofisticate accarezzano il corpo senza costringerlo, accompagnando ogni donna in un ritorno a sé. Ogni capo è un incontro tra estetica e coscienza: materiali certificati, produzione etica e colori che sussurrano. Non seguiamo tendenze: abitiamo emozioni.</p>
 
       <h2 id="collezione">Capsule Collection</h2>
-      <div class="gallery">
-        <figure>
-          <img src="collezione1.png" alt="Body Studio V." />
-          <figcaption>Body modellante in TENCEL™ - Colore: Nudo</figcaption>
-        </figure>
-        <figure>
-          <img src="collezione2.png" alt="Leggings Studio V." />
-          <figcaption>Leggings shaping - Colore: Cacao</figcaption>
-        </figure>
-      </div>
-      <p>La capsule include body, top elasticizzati e leggings shaping in taglie XS–XXL. Colori: nudo, nero, cacao, rosa cipria, celeste polvere. Tessuti certificati: TENCEL™, cotone GOTS e modal.</p>
-      <a href="#preordina" class="button highlight">Pre-ordina ora</a>
 
-      <h2 id="preordina">Preordina</h2>
-      <p>I preordini della capsule collection Studio V. apriranno a settembre 2025. Sarà possibile acquistare online i capi in edizione limitata direttamente dal sito. Le clienti iscritte alla newsletter riceveranno un link esclusivo per accedere in anticipo. Iscriviti per non perdere il tuo capo preferito!</p>
+<nav class="subnav">
+  <a href="#bodysuit">Bodysuit</a> |
+  <a href="#set">Set Due Pezzi</a> |
+  <a href="#blazer">Blazer Oversize</a>
+</nav>
 
-      <h2 id="sostenibilita">Sostenibilità</h2>
-      <p>Produzione etica in Italia. Capsule a basso impatto ambientale. Packaging compostabile, etichette e cartoline piantabili. Zero plastica.</p>
+<section id="bodysuit">
+  <h3>Bodysuit</h3>
+  <p>Bodysuit modellante a sgambatura alta, senza cuciture visibili, disponibile in sei tonalità neutre e pastello. Vestibilità avvolgente e tessuti traspiranti certificati.</p>
+  <div class="gallery">
+    <figure><img src="bodysuit-bianco.jpg" alt="Bodysuit bianco"><figcaption>Bianco</figcaption></figure>
+    <figure><img src="bodysuit-beige.jpg" alt="Bodysuit beige"><figcaption>Beige</figcaption></figure>
+    <figure><img src="bodysuit-marrone.jpg" alt="Bodysuit marrone"><figcaption>Marrone</figcaption></figure>
+    <figure><img src="bodysuit-nero.jpg" alt="Bodysuit nero"><figcaption>Nero</figcaption></figure>
+    <figure><img src="bodysuit-rosa.jpg" alt="Bodysuit rosa pastello"><figcaption>Rosa pastello</figcaption></figure>
+    <figure><img src="bodysuit-verde.jpg" alt="Bodysuit verde salvia"><figcaption>Verde salvia</figcaption></figure>
+  </div>
+</section>
 
-      <h2 id="newsletter">Newsletter</h2>
-      <p>Vuoi ricevere aggiornamenti sul lancio, nuovi capi e promozioni esclusive?</p>
+<section id="set">
+  <h3>Set Due Pezzi</h3>
+  <p>Crop top e leggings a vita alta modellanti, ideali per il movimento e il tempo libero. Disponibili nelle stesse sei tonalità della collezione.</p>
+  <div class="gallery">
+    <figure><img src="set-bianco.jpg" alt="Set bianco"><figcaption>Bianco</figcaption></figure>
+    <figure><img src="set-beige.jpg" alt="Set beige"><figcaption>Beige</figcaption></figure>
+    <figure><img src="set-marrone.jpg" alt="Set marrone"><figcaption>Marrone</figcaption></figure>
+    <figure><img src="set-nero.jpg" alt="Set nero"><figcaption>Nero</figcaption></figure>
+    <figure><img src="set-rosa.jpg" alt="Set rosa pastello"><figcaption>Rosa pastello</figcaption></figure>
+    <figure><img src="set-verde.jpg" alt="Set verde salvia"><figcaption>Verde salvia</figcaption></figure>
+  </div>
+</section>
+
+<section id="blazer">
+  <h3>Blazer Oversize</h3>
+  <p>Blazer boxy oversize, unisex, con spalle strutturate e taglio minimal. Realizzato in cotone organico, perfetto per completare look urbani o raffinati. Disponibile nei colori bianco, beige e nero.</p>
+  <div class="gallery">
+    <figure>
+      <img src="blazer-trio.jpg" alt="Blazer oversize in tre colori">
+      <figcaption>Colori disponibili: Bianco – Beige – Nero</figcaption>
+    </figure>
+  </div>
+</section>
+
+      <p>I capi sono disponibili nelle taglie XS–XXL e in sei colori neutri: bianco, beige, marrone, nero, rosa pastello e verde salvia. Realizzati in TENCEL™, cotone GOTS e modal, garantiscono comfort e sostenibilità.</p>
+
+      <h2 id="sostenibilita">Sostenibilità Radicata</h2>
+      <p>Studio V. nasce con l’impegno di ridurre l’impatto sull’ambiente in ogni fase produttiva. I capi sono confezionati in Italia da laboratori etici, utilizzando tessuti certificati e tracciabili. Il packaging è compostabile, le etichette e le cartoline sono piantabili, completamente prive di plastica. Per noi, eleganza significa anche responsabilità.</p>
+
+      <h2 id="preordina">Preordina in anteprima</h2>
+      <p>La capsule Studio V. sarà disponibile in preordine da <strong>settembre 2025</strong>. I capi, prodotti in edizione limitata, potranno essere acquistati direttamente sul sito. Le iscritte alla newsletter riceveranno l’accesso anticipato e contenuti esclusivi. Un modo per premiare chi crede nella moda consapevole. Assicurati il tuo capo preferito prima che vada esaurito.</p>
+
+      <h2 id="newsletter">Rimani connessa</h2>
+      <p>Iscriviti alla newsletter per ricevere aggiornamenti esclusivi sul lancio, nuove collezioni, promozioni riservate e storie dietro le quinte. Ogni email è pensata con cura, senza invadenza.</p>
       <form action="#" method="post">
         <input type="email" placeholder="Inserisci la tua email" required />
-        <button type="submit">Iscriviti</button>
+        <button type="submit">Iscrivimi</button>
       </form>
 
       <h2 id="contatti">Contattaci</h2>
-      <p>Email: info@studiov.it<br>Instagram: @studiov_official<br>TikTok: @studio.v</p>
+      <p>Hai domande, richieste o desideri collaborare con noi?<br>
+      Scrivici: <strong>info@studiov.it</strong><br>
+      Seguici su Instagram: <strong>@studiov_official</strong><br>
+      E scopri contenuti esclusivi su TikTok: <strong>@studio.v</strong></p>
     </section>
 
     <aside class="profile">
